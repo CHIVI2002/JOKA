@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos | JOKA</title>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo"><img src="img/logo-white-bg.png" alt="Logo JOKA" class="logo-img"></a>
+    <button id="btn-menu" class="btn-menu" aria-label="Abrir menú">☰</button>
+    <nav id="nav" class="nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a class="activo" href="productos.html">Productos</a></li>
+        <li><a href="sobre.html">Sobre nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero hero-peq">
+    <img src="img/producto-running-track.png"
+         onerror="this.onerror=null;this.src='img/producto-running-track.jpg';"
+         alt="Zapatillas JOKA en pista de atletismo">
+    <div class="hero-texto envolvente">
+      <h1 class="titulo">Catálogo JOKA</h1>
+      <p>Rendimiento, confort y estilo.</p>
+    </div>
+  </section>
+
+  <main class="seccion">
+    <div class="grid-prod grid-4">
+      <article id="volt" class="card">
+        <img src="img/producto-negro-verde.png"
+             onerror="this.onerror=null;this.src='img/producto-negro-verde.jpg';"
+             alt="JOKA Volt negro con logo verde">
+        <h3>JOKA Volt</h3>
+        <p>Drop 8 mm · 240 g · uso mixto.</p>
+      </article>
+
+      <article id="wave" class="card">
+        <img src="img/producto-azul.png" alt="JOKA Wave azul">
+        <h3>JOKA Wave</h3>
+        <p>Drop 6 mm · 230 g · larga distancia.</p>
+      </article>
+
+      <article id="neon" class="card">
+        <img src="img/producto-neon-display.png"
+             onerror="this.onerror=null;this.src='img/producto-neon-display.jpg';"
+             alt="JOKA Neon en pedestal iluminado">
+        <h3>JOKA Neon</h3>
+        <p>Estilo urbano · agarre nocturno.</p>
+      </article>
+
+      <article class="card">
+        <img src="img/producto-negro-par.png" alt="Par de JOKA negros">
+        <h3>JOKA Core (par)</h3>
+        <p>Versátiles para gym y calle.</p>
+      </article>
+    </div>
+
+    <section class="seccion">
+      <h2>Detalle de materiales</h2>
+      <div class="detalle">
+        <img src="img/detalle-azul-closeup.jpg" alt="Closeup tejido técnico JOKA">
+        <ul class="lista-check">
+          <li>Tejido mesh 3D ultraligero</li>
+          <li>Refuerzos termosellados</li>
+          <li>Suela con caucho de alta abrasión</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="img/branding-frosted-glass.jpg" class="footer-bg" alt="Branding JOKA vidrio esmerilado">
+    <div class="footer-inner">
+      <p>&copy; <span id="anio"></span> JOKA.</p>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script>document.getElementById('anio').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+

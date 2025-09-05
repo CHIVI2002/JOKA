@@ -1,0 +1,153 @@
+:root{
+  --negro:#0a0a0a;
+  --gris:#1a1a1a;
+  --blanco:#ffffff;
+  --lima:#b9ff2a;
+  --azul:#1ec3ff;
+  --azul-oscuro:#0b1930;
+  --radius:16px;
+}
+
+/* RESETEO */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;color:#e8e8e8;background:#0a0d12;line-height:1.6}
+h1,h2,h3{line-height:1.2;margin-bottom:.5rem}
+p{margin:.5rem 0 1rem}
+
+/* UTILIDADES */
+.seccion{padding:64px 20px;max-width:1200px;margin:auto}
+.seccion-titulo{font-size:2.2rem;margin-bottom:24px}
+.btn{display:inline-block;padding:12px 20px;border-radius:var(--radius);background:linear-gradient(90deg,var(--lima),var(--azul));color:#000;font-weight:700;text-decoration:none}
+.btn:hover{filter:brightness(1.05)}
+.btn-sec{background:#111;color:#e8e8e8;border:1px solid #222}
+.btn-sm{display:inline-block;margin-top:8px;padding:8px 14px;border:1px solid #333;border-radius:10px;text-decoration:none;color:#ddd}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#0d1117;border-bottom:1px solid #1f2630}
+.logo-img{height:36px;width:auto}
+.btn-menu{display:none;background:#111;color:#eee;border:1px solid #222;padding:8px 12px;border-radius:10px}
+.nav ul{display:flex;gap:18px;list-style:none}
+.nav a{color:#ddd;text-decoration:none;padding:8px 10px;border-radius:8px}
+.nav a:hover,.nav a.activo{background:#121924;color:#fff}
+
+/* HERO */
+#hero{position:relative;overflow:hidden}
+.hero{height:70vh;position:relative}
+.hero.hero-peq{height:45vh}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;filter:contrast(1.05)}
+/* Foco por slide */
+.hero-slide.pos-30 img{object-position:30% center}
+.hero-slide.pos-55 img{object-position:55% center}
+
+/* Capa oscura para legibilidad en fondos oscuros */
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.55) 60%, rgba(0,0,0,.75));z-index:0}
+.hero .hero-texto{position:absolute;inset:auto 0 12%;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;z-index:1}
+.envolvente{background:rgba(0,0,0,.35);padding:10px 16px;border-radius:12px;backdrop-filter:blur(2px)}
+.overlay .hero-texto{inset:auto 0 15%}
+.titulo{font-size:clamp(2.3rem,6.6vw,4.6rem);text-shadow:0 8px 30px rgba(0,0,0,.7);font-weight:800}
+.subtitulo{opacity:.95}
+
+/* Hero para fondos claros (contacto) */
+.light-hero::before{background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.10))}
+.light-hero .hero-texto.envolvente{background:rgba(255,255,255,.75)}
+.light-hero .titulo,.light-hero .subtitulo{color:#0d1b2a;text-shadow:none}
+
+/* SLIDER */
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease}
+.hero-slide.activo{opacity:1}
+.control{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.55);border:0;color:#fff;font-size:34px;width:46px;height:46px;border-radius:50%;cursor:pointer}
+.prev{left:12px} .next{right:12px}
+
+/* PRODUCTOS GRID */
+.grid-prod{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.card{background:#0f141b;border:1px solid #1f2a36;border-radius:var(--radius);overflow:hidden}
+.card img{width:100%;height:260px;object-fit:cover;background:#0b1118}
+.card h3{padding:12px 14px 0}
+.card p{padding:0 14px 12px;color:#cbd5e1}
+
+/* MOTIVACIONAL */
+.motivacional{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.motivacional img{width:100%;border-radius:var(--radius)}
+.lista-check{list-style:none}
+.lista-check li{margin:8px 0;padding-left:24px;position:relative}
+.lista-check li::before{content:"✓";position:absolute;left:0;color:var(--azul)}
+
+/* DETALLE */
+.detalle{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+.detalle img{width:100%;border-radius:var(--radius)}
+
+/* ACORDEÓN */
+.acordeon .item{border:1px solid #1f2a36;border-radius:12px;margin-bottom:12px;background:#0f141b;overflow:hidden}
+.pregunta{width:100%;text-align:left;background:transparent;color:#e8e8e8;border:0;padding:14px 16px;font-weight:700;cursor:pointer}
+.respuesta{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease}
+.respuesta p{padding:0 16px 14px}
+
+/* CONTACTO */
+.contacto{display:grid;grid-template-columns:1fr .8fr;gap:24px}
+.form{background:#0f141b;border:1px solid #1f2a36;border-radius:var(--radius);padding:18px}
+.campo{display:flex;flex-direction:column;margin-bottom:12px}
+label{font-size:1rem;margin-bottom:6px}
+input[type="text"],input[type="email"],textarea{background:#0b1118;border:1px solid #22303f;color:#e8e8e8;border-radius:10px;padding:10px}
+.nota{opacity:.8;font-size:.9rem}
+
+/* SOBRE NOSOTROS – panel y tipografía */
+.sobre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center}
+.lead{font-size:1.12rem}
+.xxl{font-size:2.5rem}
+.panel{background:#0f141bcc;border:1px solid #1f2a36;border-radius:16px;padding:22px;max-width:640px;margin-inline:auto}
+.img-grande{border-radius:var(--radius)}
+
+/* Tarjetas de marca más grandes */
+.brand-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+.brand{display:flex;flex-direction:column;align-items:center;justify-content:flex-start}
+.brand.brand-xl img{height:260px;object-fit:contain;background:#fff;border-radius:14px;padding:10px;width:100%}
+
+/* FOOTER */
+.footer{position:relative;margin-top:60px}
+.footer-bg{width:100%;height:260px;object-fit:cover;filter:brightness(.55)}
+.footer-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+
+/* RESPONSIVE */
+@media (max-width:1024px){
+  .grid-4{grid-template-columns:repeat(3,1fr)}
+  .motivacional,.detalle,.sobre-grid,.contacto{grid-template-columns:1fr}
+}
+@media (max-width:768px){
+  .grid-prod{grid-template-columns:1fr 1fr}
+  .btn-menu{display:inline-block}
+  .nav{position:absolute;top:56px;right:12px;background:#0d1117;border:1px solid #1f2630;border-radius:12px;padding:10px;display:none}
+  .nav.abierto{display:block}
+  .nav ul{flex-direction:column;gap:10px}
+  .brand.brand-xl img{height:220px}
+}
+@media (max-width:480px){
+  .grid-prod{grid-template-columns:1fr}
+  .hero{height:60vh}
+}
+
+/* ===== Ajustes extra ===== */
+
+/* Sección motivacional: asegúrate de que siempre tenga margen arriba */
+#motivacion{margin-top:20px}
+
+/* SOBRE — versión apilada (texto arriba + imagen abajo) */
+.sobre-intro{
+  max-width: 1200px;
+  margin: 0 auto 36px auto;
+  display: grid;
+  gap: 24px;
+}
+.panel.ancho{
+  max-width: 900px;       /* más respirado */
+  margin: 0 auto;
+}
+.img-ancha{
+  width: 100%;
+  max-height: 520px;      /* control de altura para no “comerse” la página */
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* En pantallas chicas todo ya va en una sola columna, así que no cambiamos nada. */
+

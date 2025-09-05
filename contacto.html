@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | JOKA</title>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo"><img src="img/logo-white-bg.png" alt="Logo JOKA" class="logo-img"></a>
+    <button id="btn-menu" class="btn-menu" aria-label="Abrir menú">☰</button>
+    <nav id="nav" class="nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="sobre.html">Sobre nosotros</a></li>
+        <li><a class="activo" href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero hero-peq light-hero">
+    <img src="img/branding-frosted-glass.jpg" alt="Branding JOKA vidrio esmerilado">
+    <div class="hero-texto envolvente">
+      <h1 class="titulo">Hablemos</h1>
+      <p class="subtitulo">¿Dudas, pedidos o distribuidores? Escríbenos.</p>
+    </div>
+  </section>
+
+  <!-- …resto de la página igual… -->
+  <main class="seccion contacto">
+    <form id="form-contacto" class="form" action="https://formspree.io/f/tu-endpoint" method="POST">
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+      </div>
+      <div class="campo">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required>
+      </div>
+      <div class="campo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde JOKA">
+      <button class="btn" type="submit">Enviar</button>
+      <p class="nota">Al enviar aceptas nuestra política de privacidad.</p>
+    </form>
+
+    <aside class="contacto-info">
+      <h2>Datos de contacto</h2>
+      <p><strong>Email:</strong> contacto@joka.com</p>
+      <p><strong>Tel:</strong> +52 55 0000 0000</p>
+      <img src="img/runner-logo-pista.jpg" alt="Logo JOKA sobre pista">
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <img src="img/branding-neon-hero.jpg" class="footer-bg" alt="Background neón JOKA">
+    <div class="footer-inner">
+      <p>&copy; <span id="anio"></span> JOKA.</p>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script>document.getElementById('anio').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+

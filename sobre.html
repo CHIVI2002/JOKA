@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sobre nosotros | JOKA</title>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="logo"><img src="img/logo-white-bg.png" alt="Logo JOKA" class="logo-img"></a>
+    <button id="btn-menu" class="btn-menu" aria-label="Abrir menú">☰</button>
+    <nav id="nav" class="nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a class="activo" href="sobre.html">Sobre nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero hero-peq overlay">
+    <img src="img/bg-degradado-lima-azul.jpg" alt="Degradado verde lima y azul">
+    <div class="hero-texto envolvente">
+      <h1 class="titulo">Somos JOKA</h1>
+      <p>“Step into greatness” no es solo un eslogan: es una filosofía.</p>
+    </div>
+  </section>
+
+  <main class="seccion">
+    <!-- INTRO APILADA: texto arriba (con panel ancho) + imagen abajo -->
+    <section class="sobre-intro">
+      <div class="panel ancho">
+        <h2 class="xxl">Nuestra historia</h2>
+        <p class="lead">JOKA nace para ofrecer calzado deportivo con un balance real entre innovación y accesibilidad. Probado en pista y pensado para la ciudad.</p>
+        <p class="lead">Diseñamos con foco en materiales, sostenibilidad y experiencia de usuario.</p>
+      </div>
+
+      <img src="img/runner-urbano.jpg" alt="Corredor urbano usando JOKA" class="img-ancha">
+    </section>
+
+    <!-- Tarjetas de marca -->
+    <section class="brand-cards">
+      <article class="card brand brand-xl">
+        <img src="img/logo-white-bg.png" alt="Logo JOKA fondo blanco">
+        <h3>Identidad</h3>
+        <p>Negro + verde lima + azul eléctrico.</p>
+      </article>
+      <article class="card brand brand-xl">
+        <img src="img/runner-logo-pista.jpg"
+             onerror="this.onerror=null;this.src='img/runner-logo-pista.png';"
+             alt="Logo JOKA sobre pista">
+        <h3>Pasión por el running</h3>
+        <p>Probado por atletas y entusiastas.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="img/bolt-glow-bg.jpg" class="footer-bg" alt="Rayo neón JOKA">
+    <div class="footer-inner">
+      <p>&copy; <span id="anio"></span> JOKA.</p>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script>document.getElementById('anio').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
+
