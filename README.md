@@ -6,7 +6,7 @@ Proyecto académico: desarrollo de una **página web informativa** para la marca
 
 ---
 
-## ✅ Cumplimiento de las instrucciones
+##  Cumplimiento de las instrucciones
 - **Menú y links a diferentes páginas**: navegación entre `index.html`, `productos.html`, `sobre.html`, `contacto.html`.
 - **Un solo estilo común**: todas las páginas enlazan `css/estilo.css`.
 - **Selectores CSS utilizados**  
@@ -17,7 +17,7 @@ Proyecto académico: desarrollo de una **página web informativa** para la marca
 
 ---
 
-## 🧭 Páginas
+##  Páginas
 - **Inicio** (`index.html`): hero con **slider**, productos destacados, bloque motivacional y **FAQ** (acordeón).  
 - **Productos** (`productos.html`): catálogo con tarjetas e imágenes; sección de **materiales**.  
 - **Sobre nosotros** (`sobre.html`): historia de la marca (panel destacado) e identidad visual (tarjetas).  
@@ -25,8 +25,8 @@ Proyecto académico: desarrollo de una **página web informativa** para la marca
 
 ---
 
-## 🗂️ Estructura del proyecto
-JOKA/
+##  Estructura del proyecto
+```JOKA/
 ├─ index.html
 ├─ productos.html
 ├─ sobre.html
@@ -58,31 +58,32 @@ JOKA/
 ├─ favicon-48.png
 ├─ favicon-32.png
 └─ favicon-16.png
+```
 
 
 > **Nota:** En el HTML se incluyeron *fallbacks* PNG→JPG con `onerror` para prevenir fallos si cambia la extensión de alguna imagen.
 
 ---
 
-## ▶️ Cómo ejecutar localmente
+##  Cómo ejecutar localmente
 1. Abrir la carpeta `joka/` en el editor.  
 2. Ejecutar con un servidor local (por ejemplo **Live Server** de VS Code) **o** abrir `index.html` directamente en el navegador.
 
 
 
-## ✉️ Formulario (Formspree)
+##  Formulario (Formspree)
 - En `contacto.html`, el atributo `action` apunta a un endpoint de Formspree.  
 
 
 ---
 
-## 🎨 Guía visual 
+##  Guía visual 
 - Paleta: **negro/azul oscuro** (fondos), **verde lima** y **azul eléctrico** (acentos).  
 - Tipografía del sistema (rendimiento).  
 - Componentes con esquinas redondeadas, sombras suaves y *overlays* para legibilidad.
 
 ---
 
-## 📦 Tecnologías
+##  Tecnologías
 - **HTML5**, **CSS3**, **JavaScript** (vanilla, sin frameworks).  
 - Compatibilidad moderna (Chrome/Edge/Firefox).
